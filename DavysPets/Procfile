@@ -1,0 +1,1 @@
+web: gunicorn Davys_Pets_website_shop.wsgi:application
