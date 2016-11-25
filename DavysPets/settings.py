@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = True
 SITE_ID=1
 
-ALLOWED_HOSTS = ["https://davys-pets-website.herokuapp.com/"]
+ALLOWED_HOSTS = ['davys-pets-website.herokuapp.com']
 
 
 # Application definition
