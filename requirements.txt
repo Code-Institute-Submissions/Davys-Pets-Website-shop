@@ -15,5 +15,4 @@ python-dateutil==2.6.0
 pytz==2016.7
 requests==2.12.1
 six==1.10.0
-stripe==1.42.0
 mysql-python==1.2.5

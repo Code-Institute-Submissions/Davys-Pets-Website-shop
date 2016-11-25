@@ -1,1 +1,1 @@
-web: gunicorn Davys_Pets_website_shop.wsgi:application
+web: gunicorn DavysPets.wsgi:application
