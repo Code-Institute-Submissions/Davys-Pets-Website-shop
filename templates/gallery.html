@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- gallery -->
+    <div class="gallery-top">
+        <!-- container -->
+        <div class="container">
+            <div class="gallery-info">
+                <h3>Gallery</h3>
+                <p class="caption">Just a few pictures of our regular stock</p>
+            </div>
+            <div class="gallery-grids-top">
+                <div class="gallery-grids">
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g1.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g1.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g2.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g2.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g3.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g3.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g4.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g4.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="gallery-grids gallery-grids-middle">
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g5.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g5.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/g6.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/g6.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/1621947_649413488459299_1647171241_n.jpg'%}"
+                           data-lightbox="example-set" data-title=""><img class="example-image"src="{% static 'images/1621947_649413488459299_1647171241_n.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/home_2.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/home_2.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="gallery-grids">
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/home_1.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/home_1.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/Crested Gecko.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/Crested Gecko.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/Fiji Island Iguana.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/Fiji Island Iguana.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="col-md-3 gallery-grid">
+                        <a class="example-image-link" href="{% static 'images/home_4.jpg'%}" data-lightbox="example-set"
+                           data-title=""><img class="example-image" src="{% static 'images/home_4.jpg'%}" alt=""/></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <script src="js/lightbox-plus-jquery.min.js"></script>
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //gallery -->
+{% endblock %}

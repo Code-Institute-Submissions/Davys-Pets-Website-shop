@@ -1,0 +1,92 @@
+<!--Davys Pets Website, by Seamus Gillespie
+-->
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Davys Pets, Carlow</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="reptiles Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+
+
+    <!-- bootstrap-css -->
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/../media/blog.css' %}">
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all"/>
+    <!--// css -->
+    <script src="{% static 'js/jquery-1.11.1.min.js'%}"></script>
+    {% block head_js %}{% endblock %}
+</head>
+<body>
+<!-- banner -->
+<div class="banner" style="background-image: url('{% static 'images/banner.jpg' %}')">
+    <div class="show"><img width="100%" height="200" src="{% static 'images/cropped-logo1.jpg'%} ">
+    </div>
+    <div class="top-nav">
+        <span class="menu">MENU</span>
+        <ul class="nav1">
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'about'%}">About</a></li>
+            <li><a href="{% url 'gallery'%}">Gallery</a></li>
+            <li><a href="/blog/">Blog and News</a></li>
+            <li><a href="{% url 'contact_us'%}">Contact Us</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="/products/">Products</a></li>
+        </ul>
+
+        <!--blog entries-->
+        {% block content %}
+        {% endblock %}
+        <!--blog entries-->
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+    <div class="footer">
+        <!-- container -->
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="index.html">Davys' Pets</a>
+                </div>
+                <div class="footer-icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/davyspets/" class="facebook"> </a></li>
+                        <li><a href="https://twitter.com/DavysPets" class="facebook twitter"> </a></li>
+                        <li><a href="https://plus.google.com/109337119305552367424" class="facebook chrome"> </a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //container -->
+        <div class="footer-bottom">
+            <!-- container -->
+            <div class="container">
+                <p>© 2016 Davys Pets. All rights reserved | Design by Seamus Gillespie</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- script references -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+</body>
+</html>

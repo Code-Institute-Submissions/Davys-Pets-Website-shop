@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <!-- script-for-menu -->
+    <script>
+        $("span.menu").click(function () {
+            $("ul.nav1").slideToggle(300, function () {
+                // Animation complete.
+            });
+        });
+    </script>
+    <!-- /script-for-menu -->
+
+    <div class="banner-grid">
+        <div class="bx-caption">
+            <script src="{% static 'js/responsiveslides.min.js'%}"></script>
+            <script>
+                $(function () {
+                    $("#slider3").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+                });
+            </script>
+            <div id="top" class="callbacks_container">
+                <ul class="rslides" id="slider3">
+                    <li>
+                        <div class="banner-info">
+                            <h3>Contact</h3>
+                            <p><h4>Address: Unit 4 Strawhall Industrial Estate, Carlow, Ireland</h4></p>
+                            <p><h4>Call Us Now: <a href="tel:+353 59 9716869">(059) 9716869 </a></h4></p>
+                            <p>
+                            <h4>Email: <a href="davyspets@gmail.com">davyspets@gmail.com</a></h4>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info">
+                            <h3>Welcome To Davy's Pets</h3>
+                            <p><h4>Davys pets opened on February 9th 2013 “It’s hard to believe we are over 3 years open
+                            already and already we've expanded and grown. We would like to thank everyone who has
+                            supported us throughout the years!”</h4></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- //banner -->
+    <!-- welcome -->
+    <div class="welcome">
+        <!-- container -->
+        <div class="container">
+            <div class="welcome-info">
+                <h3>Welcome</h3>
+                <p class="caption">For All your pet needs just drop in or call us</p>
+                <p class="welcome-text">We supply the finest pets and pet supplies ranging from Reptiles, Aquatics,
+                    Amphibians, Birds, Small Animals and Exotics</p>
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //welcome -->
+    <!-- offer -->
+    <div class="offer">
+        <div class="offer-right welcome-right ">
+
+        </div>
+        <div class="offer-left">
+            <h3>Who we are</h3>
+            <p>Davys pets opened on February 9th 2013 “It’s hard to believe we are over 3 years open already and already
+                we've expanded and grown. We would like to thank everyone who has supported us throughout the years!”
+
+                Davy was working in the corporate sector and realised it wasn’t what he wanted. He gave up his full time
+                career in order to persue a job that would give him 100% satisfaction and with a strong love of animals
+                what better way to do that, than open a pet store.
+            </p>
+            <div class="offer-left-list">
+                <ul>
+                    <li><a href="/products/">Fruit Flies</a></li>
+                    <li><a href="/products/">Hatchling Field Crickets</a></li>
+                    <li><a href="/products/">1st Instar Field Crickets</a></li>
+                    <li><a href="/products/">2nd Instar Field Crickets</a></li>
+                    <li><a href="/products/">3rd Instar Field Crickets</a></li>
+                </ul>
+            </div>
+            <div class="offer-left-list">
+                <ul>
+                    <li><a href="/products/">4th Instar Field Crickets</a></li>
+                    <li><a href="/products/">Standard Field Crickets</a></li>
+                    <li><a href="/products/">XL Field Crickets</a></li>
+                    <li><a href="/products/">Hatchling Brown Crickets</a></li>
+                    <li><a href="/products/">More Live Food</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- //offer -->
+    <!-- family -->
+    <div class="family">
+        <!-- container -->
+        <div class="container">
+            <div class="family-info">
+                <h3>Reptiles Family</h3>
+                <p>just some of the various Reptiles we get for our customers</p>
+            </div>
+            <div class="family-grids">
+                <div class="col-md-4 family-grid">
+                    <img src="{% static 'images/f1.png' %}">
+                    <h4>Snakes</h4>
+                </div>
+                <div class="col-md-4 family-grid">
+                    <img src="{% static 'images/f2.png' %}">
+                    <h4>Lizards</h4>
+                </div>
+                <div class="col-md-4 family-grid">
+                    <img src="{% static 'images/f3.png' %}">
+                    <h4>Frogs</h4>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //family -->
+{% endblock %}

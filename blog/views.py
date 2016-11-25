@@ -1,0 +1,73 @@
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+from .models import Post
+from blog.models import Contact
+from .forms import BlogPostForm
+
+
+def get_index(request):
+    return render(request, "index.html")
+
+def get_about(request):
+    return render(request, "about.html")
+
+def get_gallery(request):
+    return render(request, "gallery.html")
+
+def get_contact_us(request):
+    return render(request, "contact_us.html")
+
+
+def get_contacts(request):
+    return render(request, "contacts.html",
+                  {'contact_list': Contact.objects.all()})
+
+def post_detail(request, id):
+    """
+    Create a view that return a single
+    Post object based on the post ID and
+    and render it to the 'postdetail.html'
+    template. Or return a 404 error if the
+    post is not found
+    """
+    post = get_object_or_404(Post, pk=id)
+    post.views += 1  # clock up the number of post views
+    post.save()
+    return render(request, "postdetail.html", {'post': post})
+
+def post_list(request):
+    """
+    Create a view that will return a
+    list of Posts that were published prior to'now'
+    and render them to the 'blogposts.html' template
+    """
+    posts = Post.objects.filter(published_date__lte=timezone.now()
+        ).order_by('-published_date')
+    return render(request, "blogposts.html", {'posts': posts})
+
+def new_post(request):
+    if request.method == "POST":
+        form = BlogPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect(post_detail, post.pk)
+    else:
+        form = BlogPostForm()
+    return render(request, 'blogpostform.html', {'form': form})
+
+def edit_post(request, id):
+   post = get_object_or_404(Post, pk=id)
+   if request.method == "POST":
+       form = BlogPostForm(request.POST, request.FILES, instance=post)
+       if form.is_valid():
+           post = form.save(commit=False)
+           post.author = request.user
+           post.published_date = timezone.now()
+           post.save()
+           return redirect(post_detail, post.pk)
+   else:
+       form = BlogPostForm(instance=post)
+   return render(request, 'blogpostform.html', {'form': form})
