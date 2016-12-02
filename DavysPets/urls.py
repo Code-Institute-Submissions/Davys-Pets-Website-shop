@@ -17,7 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.static import serve
 from paypal.standard.ipn import urls as paypal_urls
-
 from DavysPets.settings import MEDIA_ROOT
 from accounts import views as accounts_views
 from blog.views import get_contacts, get_index, get_about, get_gallery, get_contact_us
