@@ -20,22 +20,22 @@
                 <div class="row">
                     <div class="col-xs-9">
                         {% if post.image %}
-                            <img src="/media/{{ post.image }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image }}">
                         {% endif %}
                         {% if post.image1 %}
-                            <img src="/media/{{ post.image1 }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image1 }}">
                         {% endif %}
                         {% if post.image2 %}
-                            <img src="/media/{{ post.image2 }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image2 }}">
                         {% endif %}
                         {% if post.image3 %}
-                            <img src="/media/{{ post.image3 }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image3 }}">
                         {% endif %}
                         {% if post.image4 %}
-                            <img src="/media/{{ post.image4 }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image4 }}">
                         {% endif %}
                         {% if post.image5 %}
-                            <img src="/media/{{ post.image5 }}">
+                            <img src="{{ MEDIA_URL }}{{ post.image5 }}">
                         {% endif %}
                         <p>{{ post.content }}</p>
                         <p>
