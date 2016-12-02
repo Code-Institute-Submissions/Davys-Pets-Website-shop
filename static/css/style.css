@@ -18,6 +18,14 @@ html, body{
    font-family: 'Norican-Regular';
    src: url(../fonts/Norican-Regular.ttf)format('truetype');
 }
+#padding {
+  margin-top: 50px;
+}
+
+#prod {
+  margin-top: 50px;
+}
+
 
 .top-banner{
 	padding:0;
