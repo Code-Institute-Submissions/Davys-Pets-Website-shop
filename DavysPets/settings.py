@@ -59,9 +59,7 @@ INSTALLED_APPS = [
     'django_gravatar',
     'blog',
     'dj_database_url',
-    'storages',
-    'cart',
-    'payments'
+    'storages'
 ]
 
 MIDDLEWARE = [
