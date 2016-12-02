@@ -11,50 +11,7 @@
     </script>
     <!-- /script-for-menu -->
 
-    <div class="banner-grid">
-        <div class="bx-caption">
-            <script src="{% static 'js/responsiveslides.min.js'%}"></script>
-            <script>
-                $(function () {
-                    $("#slider3").responsiveSlides({
-							auto: true,
-							pager: true,
-							nav: false,
-							speed: 500,
-							namespace: "callbacks",
-							before: function () {
-							  $('.events').append("<li>before event fired.</li>");
-							},
-							after: function () {
-							  $('.events').append("<li>after event fired.</li>");
-							}
-						  });
-                });
-            </script>
-            <div id="top" class="callbacks_container">
-                <ul class="rslides" id="slider3">
-                    <li>
-                        <div class="banner-info">
-                            <h3>Contact</h3>
-                            <p><h4>Address: Unit 4 Strawhall Industrial Estate, Carlow, Ireland</h4></p>
-                            <p><h4>Call Us Now: <a href="tel:+353 59 9716869">(059) 9716869 </a></h4></p>
-                            <p>
-                            <h4>Email: <a href="davyspets@gmail.com">davyspets@gmail.com</a></h4>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="banner-info">
-                            <h3>Welcome To Davy's Pets</h3>
-                            <p><h4>Davys pets opened on February 9th 2013 “It’s hard to believe we are over 3 years open
-                            already and already we've expanded and grown. We would like to thank everyone who has
-                            supported us throughout the years!”</h4></p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <img src="{% static 'images/interior.jpg' %}">
 
     <!-- //banner -->
     <!-- welcome -->

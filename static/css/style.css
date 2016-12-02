@@ -1245,7 +1245,7 @@ span.menu {
 	  left: -100px;
 	}
 	.banner {
-	  background: url(/media/images/interior.jpg) no-repeat -147px 74px;
+	  background: url(/static/images/interior.jpg) no-repeat -147px 74px;
 	  background-size: cover;
       z-index: 1;
 	}
