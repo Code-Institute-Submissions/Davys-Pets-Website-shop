@@ -15,39 +15,38 @@
                          class="img-circle">
                 </a>
             </div>
-            <div class="container">
-                <div class="col-md-10 col-sm-9">
-                    <h3>{{ post.title }}</h3>
-                    <div class="row">
-                        <div class="col-xs-9">
-                            {% if post.image %}
-                                <img src="/media/{{ post.image }}">
-                            {% endif %}
-                            {% if post.image1 %}
-                                <img src="/media/{{ post.image1 }}">
-                            {% endif %}
-                            {% if post.image2 %}
-                                <img src="/media/{{ post.image2 }}">
-                            {% endif %}
-                            {% if post.image3 %}
-                                <img src="/media/{{ post.image3 }}">
-                            {% endif %}
-                            {% if post.image4 %}
-                                <img src="/media/{{ post.image4 }}">
-                            {% endif %}
-                            {% if post.image5 %}
-                                <img src="/media/{{ post.image5 }}">
-                            {% endif %}
-                            <p>{{ post.content }}</p>
-                            <p>
-                                <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog</button>
-                                <button class="btn btn-default" onclick="location.href='edit'">Edit</button>
-                            </p>
-                            <p>{{ post.published_date }} | Views {{ post.views }}</p>
-                        </div>
+            <div class="col-md-10 col-sm-9">
+                <h3>{{ post.title }}</h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                        {% if post.image %}
+                            <img src="/media/{{ post.image }}">
+                        {% endif %}
+                        {% if post.image1 %}
+                            <img src="/media/{{ post.image1 }}">
+                        {% endif %}
+                        {% if post.image2 %}
+                            <img src="/media/{{ post.image2 }}">
+                        {% endif %}
+                        {% if post.image3 %}
+                            <img src="/media/{{ post.image3 }}">
+                        {% endif %}
+                        {% if post.image4 %}
+                            <img src="/media/{{ post.image4 }}">
+                        {% endif %}
+                        {% if post.image5 %}
+                            <img src="/media/{{ post.image5 }}">
+                        {% endif %}
+                        <p>{{ post.content }}</p>
+                        <p>
+                            <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog</button>
+                            <button class="btn btn-default" onclick="location.href='edit'">Edit</button>
+                        </p>
+                        <p>{{ post.published_date }} | Views {{ post.views }}</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 {% endblock %}
